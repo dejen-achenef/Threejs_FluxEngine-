@@ -54,7 +54,7 @@ export class Renderer {
     }
   }
 
-  private readonly CLEAR_COLOR = 0x1a1a1a;
+  private readonly CLEAR_COLOR = 0x0a0a0a; // Deeper workspace background
 
   // Setting up the visuals to make the PCB look professional
   private configure(): void {

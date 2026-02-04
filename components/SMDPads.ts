@@ -87,12 +87,18 @@ export class SMDPads {
   // Create the "Master" geometries that we'll copy many times
   private createGeometries(): void {
     this.rectangularGeometry = new THREE.PlaneGeometry(1, 1);
+    this.rectangularGeometry.rotateX(-Math.PI / 2);
+
     this.circularGeometry = new THREE.CircleGeometry(0.5, 32);
+    this.circularGeometry.rotateX(-Math.PI / 2);
 
     // We use "Barycentric" geometry for edges because it allows the shader to find 
     // the borders of the shape without needing wireframes.
     this.rectangularEdgeGeometry = BarycentricGeometry.createBarycentricPlane(1, 1);
+    this.rectangularEdgeGeometry.rotateX(-Math.PI / 2);
+
     this.circularEdgeGeometry = BarycentricGeometry.createBarycentricCircle(0.5, 32);
+    this.circularEdgeGeometry.rotateX(-Math.PI / 2);
   }
 
   // Adds a single pad to the list and updates the GPU data

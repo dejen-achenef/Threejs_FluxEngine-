@@ -12,7 +12,7 @@ export class Board {
   public bottomCopperLayer!: THREE.Object3D;
 
   public static readonly DEFAULT_THICKNESS = 1.6;
-  public static readonly SUBSTRATE_COLOR = 0x2d4a2b;
+  public static readonly SUBSTRATE_COLOR = 0x1a3a2a; // More vibrant, premium PCB green
 
   private width: number;
   private height: number;

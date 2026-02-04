@@ -12,7 +12,7 @@ export class CopperShader {
         uTime: { value: 0.0 },
         uHovered: { value: false },
         uSelected: { value: false },
-        uBaseColor: { value: new THREE.Color(0x72, 0x45, 0x20) } // Standard copper base
+        uBaseColor: { value: new THREE.Color(0x724520) } // Standard copper base
       },
       vertexShader: this.getVertexShader(),
       fragmentShader: this.getFragmentShader(),
