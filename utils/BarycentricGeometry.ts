@@ -162,4 +162,11 @@ export class BarycentricGeometry {
       validBarycentrics
     };
   }
+
+  /**
+   * Quick check to see if a geometry uses an index buffer.
+   */
+  public static isIndexed(geometry: THREE.BufferGeometry): boolean {
+    return !!geometry.index;
+  }
 }
