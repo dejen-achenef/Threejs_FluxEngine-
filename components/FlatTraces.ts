@@ -133,12 +133,17 @@ export class FlatTraces {
     this.instancedMesh.instanceMatrix.needsUpdate = true;
   }
 
-  // Calculations for information display
+  /**
+   * Works out the total surface area covered by all segments of a trace.
+   */
   public calculateTraceArea(traceId: string): number {
     const segments = this.traceSegments.get(traceId) || [];
     return segments.reduce((acc, s) => acc + (s.length * s.width), 0);
   }
 
+  /**
+   * Sums up the distance of every straight section in a trace path.
+   */
   public calculateTraceLength(traceId: string): number {
     const segments = this.traceSegments.get(traceId) || [];
     return segments.reduce((acc, s) => acc + s.length, 0);
