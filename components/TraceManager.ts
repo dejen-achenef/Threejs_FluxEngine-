@@ -53,7 +53,7 @@ export class TraceManager {
     const demoTraces: TraceData[] = [
       {
         id: 'trace_demo_1',
-        points: [new THREE.Vector3(-40, -20, 0), new THREE.Vector3(0, -20, 0), new THREE.Vector3(0, 20, 0)] as any,
+        points: [new THREE.Vector2(-40, -20), new THREE.Vector2(0, -20), new THREE.Vector2(0, 20)],
         width: 0.6,
         layer: 'top'
       },
