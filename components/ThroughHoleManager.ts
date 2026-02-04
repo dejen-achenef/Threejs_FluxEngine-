@@ -19,6 +19,7 @@ export class ThroughHoleManager {
         // Add the hole meshes (and their outlines) to the stage
         this.scene.add(this.holes.instancedMesh);
         this.scene.add(this.holes.edgeMesh);
+        console.log('Through-hole manager ready for drilling.');
     }
 
     public getEdgeMesh(): THREE.InstancedMesh {
