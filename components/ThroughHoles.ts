@@ -97,6 +97,13 @@ export class ThroughHoles {
         this.instancedMesh.instanceMatrix.needsUpdate = true;
     }
 
+    /**
+     * Returns a list of all defined through-holes.
+     */
+    public getAllHoles(): ThroughHoleData[] {
+        return Array.from(this.holeData.values());
+    }
+
     public dispose(): void {
         this.holeGeometry.dispose();
         if (this.instancedMesh.material instanceof THREE.Material) {
