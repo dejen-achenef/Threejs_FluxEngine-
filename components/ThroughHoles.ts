@@ -22,6 +22,7 @@ export class ThroughHoles {
     private maxInstances: number;
     private instanceCount: number = 0;
     private matrix: THREE.Matrix4;
+    private readonly RADIAL_SEGMENTS = 32;
 
     private holeGeometry!: THREE.CylinderGeometry;
 
@@ -54,7 +55,7 @@ export class ThroughHoles {
 
     // Creates the "Master Hole" that we'll copy everywhere
     private createGeometry(): void {
-        this.holeGeometry = new THREE.CylinderGeometry(0.5, 0.5, 1, 32, 1, true);
+        this.holeGeometry = new THREE.CylinderGeometry(0.5, 0.5, 1, this.RADIAL_SEGMENTS, 1, true);
 
         // We add "Barycentric" coordinates so our custom shader knows 
         // exactly where the edges of the cylinder are.
