@@ -11,6 +11,7 @@ export class ShaderManager {
   private copperMaterial: THREE.ShaderMaterial;
   private clock: THREE.Clock;
   private animationId: number | null = null;
+  private tick: number = 0;
 
   private constructor() {
     this.clock = new THREE.Clock();
@@ -56,6 +57,7 @@ export class ShaderManager {
   private startAnimation(): void {
     const animate = () => {
       const time = this.clock.getElapsedTime();
+      this.tick++;
       CopperShader.updateMaterial(this.copperMaterial, time);
       this.animationId = requestAnimationFrame(animate);
     };
