@@ -54,6 +54,8 @@ export class Renderer {
     }
   }
 
+  private readonly CLEAR_COLOR = 0x1a1a1a;
+
   // Setting up the visuals to make the PCB look professional
   private configure(): void {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -61,7 +63,7 @@ export class Renderer {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     // Set a nice dark background for the workspace
-    this.renderer.setClearColor(0x1a1a1a);
+    this.renderer.setClearColor(this.CLEAR_COLOR);
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1.0;
