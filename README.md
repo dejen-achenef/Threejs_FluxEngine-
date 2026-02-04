@@ -1,4 +1,4 @@
-# ⚡ QuantumPCB: A High-Speed 3D PCB Playground
+#  QuantumPCB: A High-Speed 3D PCB Playground
 
 Welcome to **QuantumPCB**! If you've ever tried building a 3D Printed Circuit Board (PCB) viewer in the browser and watched your frame rate drop or your textures flicker, this project is for you.
 
@@ -6,7 +6,7 @@ QuantumPCB is a professional-grade 3D visualization and editing engine built for
 
 ---
 
-## 🎨 Our Philosophy: "Mechanical-First"
+##  Our Philosophy: "Mechanical-First"
 
 Most modern web apps hide the complexity of 3D graphics behind layers of React components. While that's great for simple scenes, it can be a nightmare for complex engineering tools. 
 
@@ -17,7 +17,7 @@ Most modern web apps hide the complexity of 3D graphics behind layers of React c
 
 ---
 
-## 🚀 The Technical "Secret Sauce"
+##  The Technical "Secret Sauce"
 
 Here’s what makes QuantumPCB tick under the hood:
 
@@ -41,7 +41,7 @@ WebApps that use WebGL are notorious for eating up RAM. QuantumPCB features an *
 
 ---
 
-## 🏗️ Getting Around the Codebase
+##  Getting Around the Codebase
 
 The project is organized so that the 3D logic and the UI logic stay in their own lanes:
 
@@ -53,7 +53,7 @@ The project is organized so that the 3D logic and the UI logic stay in their own
 
 ---
 
-## 🛠️ How to Get Running
+##  How to Get Running
 
 Setting up is as simple as any modern web project:
 
@@ -69,7 +69,7 @@ Setting up is as simple as any modern web project:
 
 ---
 
-## 🖱️ How to Use the Demo
+##  How to Use the Demo
 
 *   **Navigate**: Use your **Left Mouse** to orbit, **Right Mouse** to pan, and **Scroll** to zoom in on those tiny traces.
 *   **Inspect**: Hover your mouse over any pad or trace to see it pulse. Click on it to see its details (ID, Area, Position) pop up in the **Board Inspector** sidebar.
@@ -78,10 +78,10 @@ Setting up is as simple as any modern web project:
 
 ---
 
-### 📌 A Note for Developers
+###  A Note for Developers
 QuantumPCB was built to show that the web is a first-class platform for high-end engineering software. It’s a mix of **old-school graphics optimization** and **modern React state management**. We hope it inspires you to build something performant!
 
-**Happy Engineering!** 🛠️⚡
 
 ---
 *License: MIT | Built for the next generation of EDA tools.*
+
