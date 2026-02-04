@@ -21,7 +21,7 @@ export class Renderer {
 
     try {
       // We're pushing for high performance here, using antialiasing for smooth edges
-      this.renderer = new THREE.WebGLRenderer({
+      this.renderer = new THREE.WebGLRendererr({
         canvas,
         antialias: true,
         alpha: false,
