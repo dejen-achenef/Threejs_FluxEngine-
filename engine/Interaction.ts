@@ -39,9 +39,9 @@ export class Interaction {
 
   private onMouseMove(event: MouseEvent): void {
     // We need to map the pixel coordinates to Three.js's "Normalized Device Coordinates" (-1 to +1)
-    const rect = this.canvas.getBoundingClientRect();
-    this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-    this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    const canvasBounds = this.canvas.getBoundingClientRect();
+    this.mouse.x = ((event.clientX - canvasBounds.left) / canvasBounds.width) * 2 - 1;
+    this.mouse.y = -((event.clientY - canvasBounds.top) / canvasBounds.height) * 2 + 1;
 
     // Check if the cursor is over anything interactable
     this.updateCursor();
