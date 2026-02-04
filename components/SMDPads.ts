@@ -230,6 +230,13 @@ export class SMDPads {
     this.edgeMesh.instanceMatrix.needsUpdate = true;
   }
 
+  /**
+   * Returns the current number of pads displayed on the board.
+   */
+  public getPadCount(): number {
+    return this.instanceCount;
+  }
+
   public getStats(): {
     totalInstances: number;
     maxInstances: number;
