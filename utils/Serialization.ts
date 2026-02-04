@@ -68,6 +68,8 @@ interface TrackableComponent {
  * while being extremely careful about memory usage.
  */
 export class Serialization {
+  public static readonly CURRENT_VERSION = '1.0.0';
+
   private static resourceTracker: ResourceTracker = {
     geometries: new Set(),
     materials: new Set(),
