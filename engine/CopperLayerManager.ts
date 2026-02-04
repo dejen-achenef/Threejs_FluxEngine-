@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 
+export type CopperLayer = 'top' | 'bottom';
+
 /**
  * The CopperLayerManager is our "Z-coordinate specialist".
  * Its only job is to calculate exactly where the copper should sit on the board
