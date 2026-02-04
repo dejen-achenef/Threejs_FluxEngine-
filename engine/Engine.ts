@@ -53,10 +53,13 @@ export class Engine {
 
   // Pauses the engine and stops the battery-hungry loop
   public stop(): void {
-    this.isRunning = false;
-    if (this.animationId) {
-      cancelAnimationFrame(this.animationId);
-      this.animationId = null;
+    if (this.isRunning) {
+      this.isRunning = false;
+      if (this.animationId) {
+        cancelAnimationFrame(this.animationId);
+        this.animationId = null;
+      }
+      console.log('Engine animation loop paused.');
     }
   }
 
