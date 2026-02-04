@@ -11,6 +11,8 @@ export class Board {
   public topCopperLayer!: THREE.Object3D;
   public bottomCopperLayer!: THREE.Object3D;
 
+  public static readonly DEFAULT_THICKNESS = 1.6;
+
   private width: number;
   private height: number;
   private thickness: number;
