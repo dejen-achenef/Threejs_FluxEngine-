@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls as OrbitControlss } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 /**
  * The Camera is our eye in the 3D world.
