@@ -12,6 +12,7 @@ export class Board {
   public bottomCopperLayer!: THREE.Object3D;
 
   public static readonly DEFAULT_THICKNESS = 1.6;
+  public static readonly SUBSTRATE_COLOR = 0x2d4a2b;
 
   private width: number;
   private height: number;
@@ -35,7 +36,7 @@ export class Board {
     const geometry = new THREE.BoxGeometry(this.width, this.thickness, this.height);
 
     const material = new THREE.MeshPhysicalMaterial({
-      color: 0x2d4a2b, // Classic dark green FR4 substrate
+      color: Board.SUBSTRATE_COLOR, // Classic dark green FR4 substrate
       roughness: 0.8,
       metalness: 0.0,
       clearcoat: 0.1,
