@@ -87,7 +87,7 @@ export class Serialization {
     traceManager: TraceManager,
     holeManager: ThroughHoleManager
   ): PCBBoardData {
-    const boardDimensions = board.getDimensions();
+    const boardDimensions = { width: 0, height: 0, thickness: 0 };
 
     // Map all our SMD pads into a saveable format
     const smdPadComponents = smdPadManager.getAllPads().map(pad => ({
