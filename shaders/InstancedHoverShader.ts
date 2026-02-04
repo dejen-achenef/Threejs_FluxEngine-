@@ -17,7 +17,10 @@ export class InstancedHoverShader {
   }): THREE.ShaderMaterial {
     const baseColor = options?.baseColor || new THREE.Color(0xb87333); // Real copper tint
     const edgeColor = options?.edgeColor || new THREE.Color(0x000000); // Black outlines
-    const edgeWidth = options?.edgeWidth || 1.5;
+    let edgeWidth = options?.edgeWidth || 1.5;
+
+    // Safety check to ensure we don't have invisible or inverted edges
+    if (edgeWidth < 0) edgeWidth = 0;
 
     return new THREE.ShaderMaterial({
       uniforms: {
