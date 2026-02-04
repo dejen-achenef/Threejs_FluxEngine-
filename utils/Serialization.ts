@@ -106,13 +106,15 @@ export class Serialization {
       layer: trace.layer
     }));
 
-    // Map all our drilled holes (vias)
     const holeComponents = holeManager.getAllHoles().map(hole => ({
       id: hole.id,
       type: 'drill' as const,
       pos: [hole.position.x, hole.position.y, hole.position.z] as [number, number, number],
       diameter: hole.diameter
     }));
+
+    const totalComponents = smdPadComponents.length + flatTraceComponents.length + holeComponents.length;
+    console.log(`📡 Exported ${totalComponents} components (${smdPadComponents.length} pads, ${flatTraceComponents.length} traces, ${holeComponents.length} holes).`);
 
     return {
       board: boardDimensions,
