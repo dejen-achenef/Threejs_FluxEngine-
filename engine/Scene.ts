@@ -65,6 +65,13 @@ export class Scene {
     return this.layers.get(layerName);
   }
 
+  /**
+   * Checks if a specific layer already exists in our scene.
+   */
+  public hasLayer(layerName: string): boolean {
+    return this.layers.has(layerName);
+  }
+
   public removeFromLayer(object: THREE.Object3D, layerName: string): void {
     const layer = this.layers.get(layerName);
     if (layer) {
