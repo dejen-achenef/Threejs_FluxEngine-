@@ -76,6 +76,10 @@ export class ThroughHoleManager {
         return this.holes.getAllHoles();
     }
 
+    public getHoleCount(): number {
+        return this.holes.getAllHoles().length;
+    }
+
     public clearAll(): void {
         this.holes.clear();
     }
