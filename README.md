@@ -67,6 +67,8 @@ Setting up is as simple as any modern web project:
     ```
 3.  **Open your browser**: Head to the local URL (usually `localhost:5173`) and start playing with the 3D board.
 
+> **💡 Quick Tip**: If you're seeing performance stutters, ensure your browser is using Hardware Acceleration in settings!
+
 ---
 
 ##  How to Use the Demo
