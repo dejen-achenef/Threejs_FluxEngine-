@@ -54,7 +54,7 @@ export class Renderer {
     }
   }
 
-  private readonly CLEAR_COLOR = 0x0f0f0f; // Soft charcoal workspace background
+  private readonly CLEAR_COLOR = 0x0a0a0a; // Deeper workspace background
 
   // Setting up the visuals to make the PCB look professional
   private configure(): void {
@@ -99,14 +99,5 @@ export class Renderer {
       geometries: this.renderer.info.memory.geometries,
       textures: this.renderer.info.memory.textures
     };
-  }
-
-  /**
-   * Quick peek at the engine's vitals to help with troubleshooting.
-   */
-  public logStatus(): void {
-    const memory = this.getMemoryInfo();
-    console.log(`[FluxEngine] Geometries: ${memory.geometries}, Textures: ${memory.textures}`);
-    console.log(`[FluxEngine] Draw Calls: ${this.renderer.info.render.calls}`);
   }
 }

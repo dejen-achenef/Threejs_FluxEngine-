@@ -19,9 +19,6 @@ export class ThroughHoleManager {
         // Add the hole meshes (and their outlines) to the stage
         this.scene.add(this.holes.instancedMesh);
         this.scene.add(this.holes.edgeMesh);
-
-        // Note: We use instancing here because high-density boards can have 10,000+ vias.
-        // Rendering them as individual meshes would crush the main thread.
         console.log('Through-hole manager ready for drilling.');
     }
 
@@ -74,10 +71,6 @@ export class ThroughHoleManager {
 
     public getAllHoles(): ThroughHoleData[] {
         return this.holes.getAllHoles();
-    }
-
-    public getHoleCount(): number {
-        return this.holes.getAllHoles().length;
     }
 
     public clearAll(): void {
