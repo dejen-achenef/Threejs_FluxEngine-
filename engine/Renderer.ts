@@ -100,4 +100,13 @@ export class Renderer {
       textures: this.renderer.info.memory.textures
     };
   }
+
+  /**
+   * Quick peek at the engine's vitals to help with troubleshooting.
+   */
+  public logStatus(): void {
+    const memory = this.getMemoryInfo();
+    console.log(`[FluxEngine] Geometries: ${memory.geometries}, Textures: ${memory.textures}`);
+    console.log(`[FluxEngine] Draw Calls: ${this.renderer.info.render.calls}`);
+  }
 }

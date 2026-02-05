@@ -81,6 +81,13 @@ Setting up is as simple as any modern web project:
 ###  A Note for Developers
 QuantumPCB was built to show that the web is a first-class platform for high-end engineering software. It’s a mix of **old-school graphics optimization** and **modern React state management**. We hope it inspires you to build something performant!
 
+## 🛠️ Debugging & Diagnostics
+To help monitor performance during development, the `Renderer` class includes a `logStatus()` method. You can call this from the browser console to see:
+*   **Geometries/Textures**: Quick check for memory bloat.
+*   **Draw Calls**: See how well instancing is working.
+
+---
+
 
 ---
 *License: MIT | Built for the next generation of EDA tools.*
