@@ -67,26 +67,8 @@ Setting up is as simple as any modern web project:
     ```
 3.  **Open your browser**: Head to the local URL (usually `localhost:5173`) and start playing with the 3D board.
 
-> **💡 Quick Tip**: If you're seeing performance stutters, ensure your browser is using Hardware Acceleration in settings!
-
----
-
-##  How to Use the Demo
-
-*   **Navigate**: Use your **Left Mouse** to orbit, **Right Mouse** to pan, and **Scroll** to zoom in on those tiny traces.
-*   **Inspect**: Hover your mouse over any pad or trace to see it pulse. Click on it to see its details (ID, Area, Position) pop up in the **Board Inspector** sidebar.
-*   **Move**: When a component is selected, a movement gizmo will appear. Drag the handles to reposition pads in real-time.
-*   **Save/Load**: Use the **Export** and **Import** buttons to save your board layout as a JSON file and bring it back later.
-
----
-
 ###  A Note for Developers
 QuantumPCB was built to show that the web is a first-class platform for high-end engineering software. It’s a mix of **old-school graphics optimization** and **modern React state management**. We hope it inspires you to build something performant!
-
-## 🛠️ Debugging & Diagnostics
-To help monitor performance during development, the `Renderer` class includes a `logStatus()` method. You can call this from the browser console to see:
-*   **Geometries/Textures**: Quick check for memory bloat.
-*   **Draw Calls**: See how well instancing is working.
 
 ---
 
