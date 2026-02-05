@@ -38,6 +38,8 @@ export const PCBViewer: React.FC<PCBViewerProps> = ({
     area: number;
   } | null>(null);
 
+  const [holeCount, setHoleCount] = useState<number>(0);
+
   useEffect(() => {
     if (!canvasRef.current) return;
     const canvas = canvasRef.current;
@@ -133,6 +135,7 @@ export const PCBViewer: React.FC<PCBViewerProps> = ({
           ];
           engine.interaction.setInteractableObjects(currentMeshes);
 
+          setHoleCount(holeManager.getHoleCount());
         }, 100);
 
         // Clean up everything when the component unmounts to prevent memory leaks
@@ -207,7 +210,8 @@ export const PCBViewer: React.FC<PCBViewerProps> = ({
         <p style={{ fontSize: '11px', color: '#888', marginTop: 15 }}>
           ● Instanced Rendering<br />
           ● Pixel-Perfect Hydration<br />
-          ● Explicit Disposal
+          ● Explicit Disposal<br />
+          ● Total Holes: {holeCount}
         </p>
       </div>
     </div>
