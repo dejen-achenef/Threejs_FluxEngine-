@@ -145,6 +145,12 @@ export class CopperShader {
     }
   }
 
+  public static setSelectedIntensity(material: THREE.ShaderMaterial, intensity: number): void {
+    if (material.uniforms.uSelectedIntensity) {
+      material.uniforms.uSelectedIntensity.value = intensity;
+    }
+  }
+
   public static setBaseColor(material: THREE.ShaderMaterial, color: THREE.Color): void {
     if (material.uniforms.uBaseColor) {
       material.uniforms.uBaseColor.value = color;
