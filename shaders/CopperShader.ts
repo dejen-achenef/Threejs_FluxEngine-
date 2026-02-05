@@ -12,6 +12,7 @@ export class CopperShader {
         uTime: { value: 0.0 },
         uHovered: { value: false },
         uSelected: { value: false },
+        uSelectedIntensity: { value: 1.0 },
         uBaseColor: { value: new THREE.Color(0x724520) } // Standard copper base
       },
       vertexShader: this.getVertexShader(),
@@ -48,6 +49,7 @@ export class CopperShader {
       uniform float uTime;
       uniform bool uHovered;
       uniform bool uSelected;
+      uniform float uSelectedIntensity;
       uniform vec3 uBaseColor;
 
       varying vec2 vUv;
@@ -116,7 +118,7 @@ export class CopperShader {
         
         // Solid cyan highlight for the selected element
         if (uSelected) {
-          color += vec3(0.3, 0.6, 1.0) * 0.4;
+          color += vec3(0.3, 0.6, 1.0) * 0.4 * uSelectedIntensity;
         }
         
         gl_FragColor = vec4(color, 1.0);
