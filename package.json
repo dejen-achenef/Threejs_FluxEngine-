@@ -1,6 +1,6 @@
 {
   "name": "3d-pcb-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "High-performance 3D PCB Viewer & Editor using React + Vanilla Three.js",
   "main": "index.js",
   "scripts": {
